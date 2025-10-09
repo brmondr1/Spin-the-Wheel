@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the Wheel</title>
+</head>
+<body>
+    <h1>Spin the Wheel Game</h1>
+    <button id="spinButton">Spin the Wheel</button>
+    <p id="result"></p>
+    <script>
+        document.getElementById('spinButton').addEventListener('click', function() {
+            const outcomes = ['Win a Prize!', 'Try Again!', 'Better Luck Next Time!', 'Jackpot!'];
+            const randomIndex = Math.floor(Math.random() * outcomes.length);
+            document.getElementById('result').innerText = outcomes[randomIndex];
+        });
+    </script>
+</body>
+</html>
