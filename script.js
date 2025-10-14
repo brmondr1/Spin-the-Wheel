@@ -1,7 +1,24 @@
 let money = 0;
 
-document.body.addEventListener('click', () => {
-    money += 1; // Increase money by 1 per click
+const clickArea = document.getElementById('clickArea');
+const moneyDisplay = document.getElementById('money');
 
-    document.getElementById('money').textContent = money;
+clickArea.addEventListener('click', (e) => {
+    money += 1;
+    moneyDisplay.textContent = money;
+
+    // Create floating text animation
+    const floatText = document.createElement('div');
+    floatText.textContent = "+1 💰";
+    floatText.classList.add('float-text');
+
+    // Position the floating text at the click location
+    floatText.style.left = `${e.pageX}px`;
+    floatText.style.top = `${e.pageY}px`;
+
+    // Append the floating text to the body
+    document.body.appendChild(floatText);
+
+    // Remove the floating text after the animation duration
+    setTimeout(() => floatText.remove(), 1000);
 });
