@@ -31,6 +31,16 @@ nav li {
     cursor: pointer;
 }
 
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700; /* gold hover effect */
+}
+
 main {
     flex: 1;
     display: flex;
