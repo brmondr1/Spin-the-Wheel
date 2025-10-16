@@ -113,3 +113,38 @@ body.inventory-page {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     display: none; /* Hidden by default */
 }
+
+.inventory-page .inventory-nav {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+
+.inventory-page .inventory-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.inventory-page .inventory-nav li {
+    margin: 0 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.inventory-page .inventory-nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.inventory-page .inventory-nav a:hover {
+    color: #ffd700; /* gold hover effect */
+}
+
+.inventory-page #money-display, .inventory-page #item-count {
+    margin: 10px 0;
+}
+
+/* CSS for shop.html */
