@@ -144,7 +144,11 @@ body.inventory-page {
 }
 
 .inventory-page #money-display, .inventory-page #item-count {
-    margin: 10px 0;
+    margin: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
+
+
 
 /* CSS for shop.html */
