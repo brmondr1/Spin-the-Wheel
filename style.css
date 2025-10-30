@@ -82,73 +82,81 @@ main {
 body.inventory-page {
     background-color: #297475;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    color: white;
 }
 
-.inventory-page .inventory-container {
-    background-color: #4db6ac;
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.inventory-page .inventory-grid {
+.inventory-page .navbar {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     margin-top: 20px;
 }
 
+.inventory-page .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.inventory-page .navbar a:hover {
+    background-color: #ffd700;
+    color: black;
+}
+    
+.inventory-page .inventory-container {
+    background-color: #3da6a6;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 40px;
+    width: 80%;
+    max-width: 700px;
+
+    /* Center content vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 300px;
+    padding: 40px 0;
+}
+
+.inventory-page .inventory-container h1 {
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+}
+
+.inventory-page .inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    gap: 20px;
+    justify-content: center;
+
+}
+
 .inventory-page .item-slot {
-    width: 100px;
+    width: 120px;
     height: 140px;
+    border-radius: 12px;
     background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    display: none; /* Hidden by default */
-}
-
-.inventory-page .inventory-nav {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-}
-
-.inventory-page .inventory-nav ul {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
-    list-style: none;
-    padding: 0;
+    align-items: center;
+    overflow: hidden; /* keeps images inside neatly */
 }
 
-.inventory-page .inventory-nav li {
-    margin: 0 20px;
-    font-weight: bold;
-    cursor: pointer;
+.inventory-page .item-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ensures the entire image fits without distortion */
 }
-
-.inventory-page .inventory-nav a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-}
-
-.inventory-page .inventory-nav a:hover {
-    color: #ffd700; /* gold hover effect */
-}
-
-.inventory-page #money-display, .inventory-page #item-count {
-    margin: 15px;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-
 
 /* CSS for shop.html */

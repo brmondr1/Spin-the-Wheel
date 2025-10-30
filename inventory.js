@@ -1,19 +1,24 @@
-let purchasedItems = []; // Will store names or IDs of purchased items
+const inventoryEl = document.getElementById('inventory');
 
-// Function to add a new item to the inventory
-const inventoryGrid = document.getElementById('inventory-grid');
-function addItemToInventory(itemName) {
-    purchasedItems.push(itemName);
+const purchasedItems = [
+    { name: "Car", image: "images/car.png" },
+    { name: "Dawg", image: "images/puppy.png" },
+    { name: "Kirby", image: "images/kirby.png" },
+    { name: "One Ugly Shoe", image: "images/one ugly shoe.png" },
+];
 
-// Create the visual slots for the inventory
-const itemSlot = document.createElement('div');
-itemSlot.classList.add('inventory-item-slot');
-itemSlot.style.display = "block"; // Ensure slots are visible
+// Clear existing inventory items
+inventoryEl.innerHTML = '';
 
-inventoryGrid.appendChild(itemSlot);
-}
+// Only show purchased images
+purchasedItems.forEach(item => {
+    const slot = document.createElement('div');
+    slot.classList.add('item-slot');
 
-// simulate buying an item
-setTimeout(() => addItemToInventory("Item 1"), 1000);
-setTimeout(() => addItemToInventory("Item 2"), 2000);
-setTimeout(() => addItemToInventory("Item 3"), 3000);
+    const img = document.createElement('img');
+    img.src = item.image;
+    img.alt = item.name;
+
+    slot.appendChild(img);
+    inventoryEl.appendChild(slot);
+});

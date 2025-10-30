@@ -7,23 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="inventory-page">
+    <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="shop.html">Shop</a>
+    </nav>
+
     <div class="inventory-container">
         <h1>Your Inventory</h1>
-        <div id="inventory-grid" class="inventory-grid">
-            <!-- Inventory items will be dynamically added here -->
-
-        <h3 id="money-display">Money: $0</h3> <!-- New element for money display -->
-        <h3 id="item-count">Total Items: 0</h3> <!-- New element for item count -->
-        
-        <nav class="inventory-nav">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="inventory.html">Inventory</a></li>
-                <li><a href="shop.html">Shop</a></li>
-            </ul>
-        </nav>
+        <div class="inventory-grid">
+            <div class="item-slot"></div>
+            <div class="item-slot"></div>
+            <div class="item-slot"></div>
+            <div class="item-slot"></div>
+            <!-- Inventory items will be dynamically inserted here -->
         </div>
-     </div>
+    </div>
+</div>
 
      <script src="inventory.js"></script>
 </body>
